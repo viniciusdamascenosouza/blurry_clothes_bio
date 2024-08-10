@@ -1,35 +1,65 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import styled from "styled-components";
+import Links from "./components/Links";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const MainBox = styled.div`
+    background-image: url("/src/assets/wp2631964.jpg");
+    background-size: cover;
+    background-repeat: repeat;
+    font-size: 1.5rem;
+
+    width: 100%;
+    height: 120vh;
+
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  `;
+
+  const LogoBox = styled.div`
+    background-color: #2c3333;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  `;
+
+  const Logo = styled.img`
+    max-width: 100%;
+    height: 200px;
+    object-fit: contain;
+  `;
+
+  const Footer = styled.footer`
+    background-color: #808080;
+    text-align: center;
+    width: 100%;
+  `;
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <MainBox>
+        <LogoBox>
+          <Logo
+            src="/src/assets/blurryclothes02.png"
+            alt="Logo da Blurry Clothes"
+          />
+        </LogoBox>
+        <Links />
+        <Footer>
+          <p>&copy; 2024 Blurry Clothes. Todos os direitos reservados.</p>
+          <p>Desenvolvidos por Vinícius Damasceno</p>
+        </Footer>
+      </MainBox>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
