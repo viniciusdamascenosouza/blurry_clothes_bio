@@ -3,7 +3,7 @@ import Links from "./components/Links";
 
 function App() {
   const MainBox = styled.div`
-    background-image: url("../public/wp2631964.jpg");
+    background-image: url("/public/wp2631964.jpg");
     background-size: cover;
     background-repeat: repeat;
     font-size: 1.5rem;
@@ -47,7 +47,7 @@ function App() {
       <MainBox>
         <LogoBox>
           <Logo
-            src="../public/blurryclothes02.png"
+            src="/public/blurryclothes02.png"
             alt="Logo da Blurry Clothes"
           />
         </LogoBox>
